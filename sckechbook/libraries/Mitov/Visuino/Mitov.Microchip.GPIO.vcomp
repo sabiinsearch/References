@@ -1,0 +1,31 @@
+Mitov
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::Microchip_MCP23017_Channel' )]
+  +TArduinoMicrochipMCP23017Channel : TArduinoBasicDigitalPullUpGPIOChannel
+
+    [ArduinoUseBindingCheckSetter( 'PinDirectionsInit' )]
+    IsInverted : Boolean = False
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_Microchip_MCP23017.h' )]
+  [ArduinoClass( 'Mitov::Microchip_MCP23017' )]
+  [Name( 'Microchip MCP23017 GPIO' )]
+  [CreateName( 'GPIO' )]
+  [ArduinoWebKeywords( 'Microchip MCP23017' )]
+  [Category( TArduinoDigitalInputOutputToolbarCategory )]
+  [ArduinoStart]
+  [ArduinoLoopBegin]
+  [ArduinoLoopUpdateHardware]
+  +TArduinoMicrochipMCP23017 : TArduinoI2CGPIO
+
+    [DesignRange( $20, $27 )]
+    Address = $20
+    
+    [AddIndexedNamedItem( TArduinoMicrochipMCP23017Channel, 'A', 8 )]
+    [AddIndexedStartNamedItem( TArduinoMicrochipMCP23017Channel, 0, 'B', 8 )]
+    Channels
+
+  ;
+//---------------------------------------------------------------------------
+; // Mitov

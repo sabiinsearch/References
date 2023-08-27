@@ -1,0 +1,460 @@
+[VisuinoApplication( VisuinoPro )]
+Mitov
+//---------------------------------------------------------------------------
+  [CreateName( 'Analog' )]
+  [Name( 'Analog' )]
+  [ParentImage( TArduinoBasicAnalogValueElement )]
+  [ArduinoCustomCodeInputDataType( 'float' )]
+  +TArduinoCustomCodeInputAnalogElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputAnalogElement )]
+    InputPin : TOWArduinoAnalogSinkPin
+
+    [ArduinoCustomCodeParameter( 'float' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Digital' )]
+  [Name( 'Digital' )]
+  [ParentImage( TArduinoMemoryDigitalElement )]
+  [ArduinoCustomCodeInputDataType( 'bool' )]
+  +TArduinoCustomCodeInputDigitalElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputDigitalElement )]
+    InputPin : TOWArduinoDigitalSinkPin
+
+    [ArduinoCustomCodeParameter( 'bool' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Integer' )]
+  [Name( 'Integer' )]
+  [ParentImage( TArduinoMemoryIntegerElement )]
+  [ArduinoCustomCodeInputDataType( 'int32_t' )]
+  +TArduinoCustomCodeInputIntegerElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputIntegerElement )]
+    InputPin : TOWArduinoIntegerSinkPin
+
+    [ArduinoCustomCodeParameter( 'int32_t' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Unsigned' )]
+  [Name( 'Unsigned' )]
+  [ParentImage( TArduinoMemoryUnsignedElement )]
+  [ArduinoCustomCodeInputDataType( 'uint32_t' )]
+  +TArduinoCustomCodeInputUnsignedElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputUnsignedElement )]
+    InputPin : TOWArduinoUnsignedSinkPin
+
+    [ArduinoCustomCodeParameter( 'uint32_t' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Char' )]
+  [Name( 'Char' )]
+  [ParentImage( TArduinoMemoryCharElement )]
+  [ArduinoCustomCodeInputDataType( 'char' )]
+  +TArduinoCustomCodeInputCharElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputUnsignedElement )]
+    InputPin : TOWArduinoCharSinkPin
+
+    [ArduinoCustomCodeParameter( 'char' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'DateTime' )]
+  [Name( 'Date/Time' )]
+  [ParentImage( TArduinoMemoryDateTimeElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TDateTime' )]
+  +TArduinoCustomCodeInputDateTimeElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputDateTimeElement )]
+    InputPin : TOWArduinoDateTimeSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TDateTime' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Color' )]
+  [Name( 'Color' )]
+  [ParentImage( TArduinoMemoryColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TColor' )]
+  +TArduinoCustomCodeInputColorElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputColorElement )]
+    InputPin : TOWArduinoColorSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TColor' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'AlphaColor' )]
+  [Name( 'Alpha Color' )]
+  [ParentImage( TArduinoMemoryAlphaColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TAlphaColor' )]
+  +TArduinoCustomCodeInputAlphaColorElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputAlphaColorElement )]
+    InputPin : TOWArduinoAlphaColorSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TAlphaColor' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'RGBWColor' )]
+  [Name( 'RGBW Color' )]
+  [ParentImage( TArduinoMemoryRGBWColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TRGBWColor' )]
+  +TArduinoCustomCodeInputRGBWColorElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputRGBWColorElement )]
+    InputPin : TOWArduinoRGBWColorSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TRGBWColor' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'RGBWAlphaColor' )]
+  [Name( 'RGBW Alpha Color' )]
+  [ParentImage( TArduinoMemoryRGBWAlphaColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TRGBWAlphaColor' )]
+  +TArduinoCustomCodeInputRGBWAlphaColorElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputRGBWAlphaColorElement )]
+    InputPin : TOWArduinoRGBWAlphaColorSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TRGBWAlphaColor' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Orientation2D' )]
+  [Name( 'Orientation 2D' )]
+//  [ParentImage( TArduinoMemoryRGBWColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TArduinoGraphicsOrientation' )]
+  +TArduinoCustomCodeInputOrientation2DElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputOrientation2DElement )]
+    InputPin : TOWArduinoOrientation2DSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TArduinoGraphicsOrientation' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Orientation3D' )]
+  [Name( 'Orientation 3D' )]
+//  [ParentImage( TArduinoMemoryRGBWColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TArduino3DOrientation' )]
+  +TArduinoCustomCodeInputOrientation3DElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputOrientation3DElement )]
+    InputPin : TOWArduinoOrientation3DSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TArduino3DOrientation' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'AnalogArray' )]
+  [Name( 'Analog Array' )]
+//  [ParentImage( TArduinoMemoryAnalogArrayElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TArray<float>' )]
+  +TArduinoCustomCodeInputAnalogArrayElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputAnalogArrayElement )]
+    InputPin : TOWArduinoAnalogArraySinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TArray<float>' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'ComplexArray' )]
+  [Name( 'Complex Array' )]
+//  [ParentImage( TArduinoMemoryAnalogArrayElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TArray<Mitov::TComplex>' )]
+  +TArduinoCustomCodeInputComplexArrayElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputComplexArrayElement )]
+    InputPin : TOWArduinoComplexArraySinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TArray<Mitov::TComplex>' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Binary' )]
+  [Name( 'Binary' )]
+//  [ParentImage( TArduinoMemoryColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TDataBlock' )]
+  +TArduinoCustomCodeInputBinaryElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputBinaryElement )]
+    InputPin : TOWArduinoByteSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TDataBlock' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Image' )]
+  [Name( 'Image' )]
+//  [ParentImage( TArduinoMemoryColorElement )]
+  [ArduinoCustomCodeInputDataType( 'Mitov::TImageBuffer' )]
+  +TArduinoCustomCodeInputImageElement : TArduinoCustomCodeInputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeInputImageElement )]
+    InputPin : TOWArduinoImageSinkPin
+
+    [ArduinoCustomCodeParameter( 'Mitov::TImageBuffer' )]
+    OnData
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Clock' )]
+  [Name( 'Clock' )]
+  [ParentImage( TArduinoCustomCodeInputClockElement )]
+  [ArduinoClass( 'Mitov::CustomClockOutput' )]
+  +TArduinoCustomCodeOutputClockElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputClockElement )]
+    OutputPin : TOWArduinoClockSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Analog' )]
+  [Name( 'Analog' )]
+  [ParentImage( TArduinoCustomCodeInputAnalogElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'float' )]
+  +TArduinoCustomCodeOutputAnalogElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputAnalogElement )]
+    OutputPin : TOWArduinoAnalogFlexibleSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Digital' )]
+  [Name( 'Digital' )]
+  [ParentImage( TArduinoCustomCodeInputDigitalElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'bool' )]
+  +TArduinoCustomCodeOutputDigitalElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputDigitalElement )]
+    OutputPin : TOWArduinoDigitalFlexibleSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Integer' )]
+  [Name( 'Integer' )]
+  [ParentImage( TArduinoCustomCodeInputIntegerElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+  +TArduinoCustomCodeOutputIntegerElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputIntegerElement )]
+    OutputPin : TOWArduinoIntegerSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Unsigned' )]
+  [Name( 'Unsigned' )]
+  [ParentImage( TArduinoCustomCodeInputUnsignedElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+  +TArduinoCustomCodeOutputUnsignedElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputUnsignedElement )]
+    OutputPin : TOWArduinoUnsignedSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Char' )]
+  [Name( 'Char' )]
+  [ParentImage( TArduinoCustomCodeInputCharElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'char' )]
+  +TArduinoCustomCodeOutputCharElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputUnsignedElement )]
+    OutputPin : TOWArduinoCharSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'DateTime' )]
+  [Name( 'Date/Time' )]
+  [ParentImage( TArduinoCustomCodeInputDateTimeElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TDateTime' )]
+  +TArduinoCustomCodeOutputDateTimeElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputDateTimeElement )]
+    OutputPin : TOWArduinoDateTimeSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Color' )]
+  [Name( 'Color' )]
+  [ParentImage( TArduinoCustomCodeInputColorElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TColor' )]
+  +TArduinoCustomCodeOutputColorElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputColorElement )]
+    OutputPin : TOWArduinoColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'AlphaColor' )]
+  [Name( 'Alpha Color' )]
+  [ParentImage( TArduinoCustomCodeInputAlphaColorElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TAlphaColor' )]
+  +TArduinoCustomCodeOutputAlphaColorElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputAlphaColorElement )]
+    OutputPin : TOWArduinoAlphaColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'RGBWColor' )]
+  [Name( 'RGBW Color' )]
+  [ParentImage( TArduinoCustomCodeInputRGBWColorElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TRGBWColor' )]
+  +TArduinoCustomCodeOutputRGBWColorElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputRGBWColorElement )]
+    OutputPin : TOWArduinoRGBWColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'RGBWAlphaColor' )]
+  [Name( 'RGBW Alpha Color' )]
+  [ParentImage( TArduinoCustomCodeInputRGBWAlphaColorElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TRGBWAlphaColor' )]
+  +TArduinoCustomCodeOutputRGBWAlphaColorElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputRGBWAlphaColorElement )]
+    OutputPin : TOWArduinoRGBWAlphaColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Orientation2D' )]
+  [Name( 'Orientation 2D' )]
+  [ParentImage( TArduinoCustomCodeInputOrientation2DElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TArduinoGraphicsOrientation' )]
+  +TArduinoCustomCodeOutputOrientation2DElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputOrientation2DElement )]
+    OutputPin : TOWArduinoOrientation2DSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Orientation3D' )]
+  [Name( 'Orientation 3D' )]
+  [ParentImage( TArduinoCustomCodeInputOrientation3DElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TArduino3DOrientation' )]
+  +TArduinoCustomCodeOutputOrientation3DElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputOrientation3DElement )]
+    OutputPin : TOWArduinoOrientation3DSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Text' )]
+  [Name( 'Text' )]
+  [ParentImage( TArduinoCustomCodeInputTextElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::String' )]
+  +TArduinoCustomCodeOutputTextElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputTextElement )]
+    OutputPin : TOWArduinoStringSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'AnalogArray' )]
+  [Name( 'Analog Array' )]
+  [ParentImage( TArduinoCustomCodeInputAnalogArrayElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TArray<float>' )]
+  +TArduinoCustomCodeOutputAnalogArrayElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputAnalogArrayElement )]
+    OutputPin : TOWArduinoAnalogArraySourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'ComplexArray' )]
+  [Name( 'Complex Array' )]
+  [ParentImage( TArduinoCustomCodeInputComplexArrayElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TArray<Mitov::TComplex>' )]
+  +TArduinoCustomCodeOutputComplexArrayElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputComplexArrayElement )]
+    OutputPin : TOWArduinoComplexArraySourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Binary' )]
+  [Name( 'Binary' )]
+  [ParentImage( TArduinoCustomCodeInputBinaryElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TDataBlock' )]
+  +TArduinoCustomCodeOutputBinaryElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputBinaryElement )]
+    OutputPin : TOWArduinoByteSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [CreateName( 'Image' )]
+  [Name( 'Image' )]
+  [ParentImage( TArduinoCustomCodeInputImageElement )]
+  [ArduinoTemplateParameter( 'TYPE', 'Mitov::TImageBuffer' )]
+  +TArduinoCustomCodeOutputImageElement : TArduinoCustomCodeOutputBasicElement
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoCustomCodeOutputImageElement )]
+    OutputPin : TOWArduinoImageSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+; // Mitov
