@@ -1,0 +1,38 @@
+{
+	"name": "dWin",
+	"version": "2.0.9",
+	"keywords": "LCD, dWin, HMI, Touch, Screen",
+	"description": "Dwin HMI LCD Screen Library.",
+	"authors": [
+		{
+			"name": "Mehmet Gunce Akkoyun",
+			"email": "akkoyun@me.com",
+			"url": "https://github.com/akkoyun"
+		},
+		{
+			"name": "Recep Senbas",
+			"email": "recepsenbas@gmail.com",
+			"url": "https://github.com/recepsenbas"
+		}
+	],
+	"license": "MIT",
+	"frameworks": "arduino",
+	"headers": "dWin_Arduino.h",
+	"platforms": [
+		"atmelavr",
+		"atmelmegaavr"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/akkoyun/dWin.git"
+	},
+	"examples": [
+		{
+			"name": "HMI Test",
+			"base": "examples/test",
+			"files": [
+				"test.ino"
+			]
+		}
+	]
+}
