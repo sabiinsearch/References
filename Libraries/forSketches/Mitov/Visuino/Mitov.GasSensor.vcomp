@@ -1,0 +1,66 @@
+Mitov
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_GasSensor.h' )]
+  [ArduinoClass( 'Mitov::TArduinoGasSensorMQCorrection' )]
+  [ArduinoOwnerTemplateTypeAndReference]
+  [ArduinoDeclaredClass]
+  [ArduinoExcludeUnconnected]
+  TArduinoGasSensorMQCorrection : TArduinoCodePersistent
+
+    [OWPrimaryPin]
+    [Name( 'Temperature(C)' )]
+    TemperatureInputPin : TOWArduinoAnalogSinkPin
+
+    [OWPrimaryPin]
+    [Name( 'Humidity(%)' )]
+    HumidityInputPin : TOWArduinoAnalogSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_GasSensor.h' )]
+  [ArduinoClass( 'Mitov::TArduinoGasSensorMQCallibration' )]
+  [ArduinoOwnerTemplateTypeAndReference]
+  [ArduinoDeclaredClass]
+  [ArduinoExcludeUnconnected]
+  [ArduinoStart]
+  [ArduinoLoopBegin]
+  TArduinoGasSensorMQCallibration : TArduinoCodePersistent
+
+    CallibrateInputPin : TOWArduinoClockSinkPin
+
+    [ArduinoChangeOnlyPin]
+    CallibratingOutputPin : TOWArduinoDigitalFlexibleSourcePin
+
+    Period : Unsigned = 25000
+
+  ;
+//---------------------------------------------------------------------------
+  [Category( TArduinoAnalogMeasurementToolbarCategory )]
+  [ArduinoInclude( 'Mitov_GasSensor.h' )]
+  [ArduinoClass( 'Mitov::GasSensorMQ135' )]
+  [Name( 'Air Quality Benzene, Alcohol, Smoke(Gas) Sensor MQ-135' )]
+  [CreateName( 'GasSensor' )]
+  [ArduinoWebKeywords( 'MQ-135 Gas Sensor' )]
+  [ArduinoVariable( Boolean, 'FChangeOnly' )]
+  [ArduinoVariable( Boolean, 'FCalibrating' )]
+  [ArduinoVariable( Boolean, 'FFirstSample' )]
+  +TArduinoGasSensorMQ135 : TArduinoCommonAnalogEnableSink
+
+    [OWPrimaryPin]
+    [OWPinListPrimaryPinType( TOWArduinoAnalogFlexibleSourcePin )]
+    [OWAddPin( 'CO2', TOWArduinoAnalogFlexibleSourcePin )]
+    [OWAddPin( 'CO', TOWArduinoAnalogFlexibleSourcePin )]
+    [OWAddPin( 'Methyl', TOWArduinoAnalogFlexibleSourcePin )]
+    [OWAddPin( 'Ammonium', TOWArduinoAnalogFlexibleSourcePin )]
+    [OWAddPin( 'Acetone', TOWArduinoAnalogFlexibleSourcePin )]
+    [OWAddPin( 'Ethanol', TOWArduinoAnalogFlexibleSourcePin )]
+    OutputPins : TOWArduinoPinList
+
+    LoadResistor : Single = 0.990
+    CleanAirValue : Single = 0.04
+    Correction : TArduinoGasSensorMQCorrection
+    Callibration : TArduinoGasSensorMQCallibration
+
+  ;
+//---------------------------------------------------------------------------
+; // Mitov
