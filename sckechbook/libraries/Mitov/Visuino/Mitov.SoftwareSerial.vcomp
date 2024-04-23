@@ -1,0 +1,29 @@
+Mitov
+//---------------------------------------------------------------------------
+  [Name( 'Software Serial Port' )]
+  [CreateName( 'SoftwareSerial' )]
+  [ArduinoInclude( 'SoftwareSerial.h' )]
+  [ArduinoInclude( 'Mitov_SoftwareSerial.h' )]
+  [ArduinoClass( 'Mitov::VisuinoSoftwareSerial' )]
+  [ArduinoInit]
+  [ArduinoStart]
+  [ArduinoLoopBegin]
+  +TArduinoSoftwareSerial : TArduinoBasicSoftwareSerial
+
+    [OWPrimaryPin]
+    [OWPinListPrimaryPinType( TOWArduinoDigitalOutputSourcePin )]
+    [ArduinoExclude]
+    [ArduinoDirectPinTemplate( '0_', True )]
+    [OWAddPin( 'RX', TOWArduinoDigitalOutputSourcePin_Required )]
+    [OWAddPin( 'TX', TOWArduinoDigitalOutputSourcePin_Required )]
+    ControlOutputPins : TOWArduinoPinList
+
+    [ArduinoPinConnectDefine( '_MITOV_SOFTWARE_SERIAL_SENDING_PIN_' )]
+    SendingOutputPin
+
+    [ArduinoExclude]
+    OutputPin // Manually populated!
+
+  ;
+//---------------------------------------------------------------------------
+; // Mitov

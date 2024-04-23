@@ -1,0 +1,52 @@
+Mitov
+//---------------------------------------------------------------------------
+  [ArduinoScopedEnum]
+  TArduinoClockMode : Enum
+
+    Falling
+    Rising
+    Change
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_RotaryEncoderSensor.h' )]
+  [ArduinoClass( 'Mitov::RotaryEncoderSensor' )]
+  [CreateName( 'RotaryEncoderSensor' )]
+  [Name( 'Rotary Encoder Sensor' )]
+  [Category( TArduinoDigitalMeasurementToolbarCategory )]
+  [ArduinoInit]
+  [ArduinoStart]
+  [ArduinoLoopBegin]
+//  [ArduinoVariable( System.TypeInfo(Boolean), 'FAValue' )]
+  [ArduinoVariableIfClassIsName( 'Mitov::RotaryEncoderSensor_Debounce', Boolean, 'FALastValue' )]
+  +TArduinoRotaryEncoderSensor : TArduinoCommonBasicCounter
+
+    [OWPrimaryPin]
+    [Name( 'Clock(A)' )]
+    [ArduinoInterruptChange( '_Interrupt', True, 'InterruptHandlerA' )]
+    [ArduinoAddVariableIfPinInterruptUnconnected( True, Unsigned, 7, 'FAValue' )]
+    AInputPin : TOWArduinoDigitalInterruptSinkPin
+
+    [OWPrimaryPin]
+    [Name( 'Direction(B)' )]
+    [ArduinoExclude]
+    [ArduinoDirectPinReferenceTemplate( '0_B_' )]
+    [ArduinoNeedsChannelInstance]
+    [OWRequiredPin]
+    BInputPin : TOWArduinoDigitalInputSinkPin
+
+    [OWPrimaryPin]
+    UpOutputPin : TOWArduinoClockSourcePin
+
+    [OWPrimaryPin]
+    DownOutputPin : TOWArduinoClockSourcePin
+
+    ClockMode : TArduinoClockMode = Falling
+
+    [ NamePostfix( '(mS)' ) ]
+    [ArduinoNotDefaultPostfix( '_Debounce' )]
+    DebounceInterval : Unsigned = 0
+
+  ;
+//---------------------------------------------------------------------------
+; // Mitov

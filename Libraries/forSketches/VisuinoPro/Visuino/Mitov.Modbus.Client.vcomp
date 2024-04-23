@@ -1,0 +1,567 @@
+[VisuinoApplication( VisuinoPro )]
+Mitov
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadCoilRequest' )]
+  [ArduinoClass( 'Mitov::TCLModbusReadBooleanBasicRequest' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadCoils' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '1' )]
+  [Name( 'Read Coil' )]
+  [Category( TModbusReadCoilsControlToolbarCategory )]
+  [ParentImage( TCLModbusReadCoilRequest )]
+  +TArduinoModbusReadCoilRequest : TArduinoModbusBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadCoilRequest )]
+    OutputPin : TOWArduinoDigitalFlexibleSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteCoilRequest' )]
+  [Name( 'Write Coil' )]
+  [Category( TModbusWriteCoilsControlToolbarCategory )]
+  [ParentImage( TCLModbusWriteCoilRequest )]
+  +TArduinoModbusWriteCoilRequest : TArduinoModbusBasicRequest
+
+    [ArduinoPinIsConnectedFlag]
+    ClockInputPin
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteCoilRequest )]
+    InputPin : TOWArduinoDigitalSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Boolean = False
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadDigitalInputRequest' )]
+  [ArduinoClass( 'Mitov::TCLModbusReadBooleanBasicRequest' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadInputBits' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '1' )]
+  [Name( 'Read Digital Input' )]
+  [Category( TModbusReadDigitalInputsControlToolbarCategory )]
+  [ParentImage( TCLModbusReadDigitalInputRequest )]
+  +TArduinoModbusReadDigitalInputRequest : TArduinoModbusBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadDigitalInputRequest )]
+    OutputPin : TOWArduinoDigitalFlexibleSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadHoldingRegister16BitRequest<uint32_t, uint16_t>' )]
+  [ArduinoClass( 'Mitov::ModbusRead16BitRegisterRequest' )]
+//  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+//  [ArduinoTemplateParameter( 'TYPE1', 'uint16_t' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint16_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadHoldingRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '1' )]
+  [Name( 'Read Holding Register 16 bit Unsigned' )]
+  [ParentImage( TCLModbusReadHoldingRegister16BitUnsignedRequest )]
+  +TArduinoModbusReadHoldingRegister16BitUnsignedRequest : TArduinoModbusReadHoldingRegistersBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadHoldingRegister16BitUnsignedRequest )]
+    OutputPin : TOWArduinoUnsignedSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadHoldingRegister16BitRequest<int32_t, int16_t>' )]
+  [ArduinoClass( 'Mitov::ModbusRead16BitRegisterRequest' )]
+//  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+//  [ArduinoTemplateParameter( 'TYPE1', 'uint16_t' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int16_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadHoldingRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '1' )]
+  [Name( 'Read Holding Register 16 bit Integer' )]
+  [ParentImage( TCLModbusReadHoldingRegister16BitIntegerRequest )]
+  +TArduinoModbusReadHoldingRegister16BitIntegerRequest : TArduinoModbusReadHoldingRegistersBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadHoldingRegister16BitIntegerRequest )]
+    OutputPin : TOWArduinoIntegerSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  TArduinoModbusReadHoldingRegisterWordOrderBasicRequest : TArduinoModbusReadHoldingRegistersBasicRequest
+
+    MostSignificantWordFirst : Boolean = False
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadHoldingRegister32BitRequest<uint32_t>' )]
+  [ArduinoClass( 'Mitov::ModbusRead32BitRegisterRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadHoldingRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '2' )]
+  [Name( 'Read Holding Register 32 bit Unsigned' )]
+  [ParentImage( TCLModbusReadHoldingRegister32BitUnsignedRequest )]
+  +TArduinoModbusReadHoldingRegister32BitUnsignedRequest : TArduinoModbusReadHoldingRegisterWordOrderBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadHoldingRegister32BitUnsignedRequest )]
+    OutputPin : TOWArduinoUnsignedSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadHoldingRegister32BitRequest<int32_t>' )]
+  [ArduinoClass( 'Mitov::ModbusRead32BitRegisterRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadHoldingRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '2' )]
+  [Name( 'Read Holding Register 32 bit Integer' )]
+  [ParentImage( TCLModbusReadHoldingRegister32BitIntegerRequest )]
+  +TArduinoModbusReadHoldingRegister32BitIntegerRequest : TArduinoModbusReadHoldingRegisterWordOrderBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadHoldingRegister32BitIntegerRequest )]
+    OutputPin : TOWArduinoIntegerSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadHoldingRegister32BitRequest<float>' )]
+  [ArduinoClass( 'Mitov::ModbusRead32BitRegisterRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'float' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadHoldingRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '2' )]
+  [Name( 'Read Holding Register 32 bit Analog' )]
+  +TArduinoModbusReadHoldingRegister32BitAnalogRequest : TArduinoModbusReadHoldingRegisterWordOrderBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadHoldingRegister32BitAnalogRequest )]
+    OutputPin : TOWArduinoAnalogFlexibleSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusReadRegister16Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+  [ArduinoTemplateParameter( 'TYPE_1', 'uint16_t' )]
+  [Name( '16 bit Unsigned' )]
+  [ParentImage( TCLModbusReadRegister16BitUnsigned )]
+  +TArduinoModbusReadRegister16BitUnsigned : TArduinoModbusBasicReadRegister
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadRegister16BitUnsigned )]
+    OutputPin : TOWArduinoUnsignedSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusReadRegister16Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+  [ArduinoTemplateParameter( 'TYPE_1', 'int16_t' )]
+  [Name( '16 bit Integer' )]
+  [ParentImage( TCLModbusReadRegister16BitInteger )]
+  +TArduinoModbusReadRegister16BitInteger : TArduinoModbusBasicReadRegister
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadRegister16BitInteger )]
+    OutputPin : TOWArduinoIntegerSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusReadRegister32Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+  [Name( '32 bit Unsigned' )]
+  [ParentImage( TCLModbusReadRegister32BitUnsigned )]
+  +TArduinoModbusReadRegister32BitUnsigned : TArduinoModbusReadInputRegisterWordOrderBasic
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadRegister32BitUnsigned )]
+    OutputPin : TOWArduinoUnsignedSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusReadRegister32Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+  [Name( '32 bit Integer' )]
+  [ParentImage( TCLModbusReadRegister32BitInteger )]
+  +TArduinoModbusReadRegister32BitInteger : TArduinoModbusReadInputRegisterWordOrderBasic
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadRegister32BitInteger )]
+    OutputPin : TOWArduinoIntegerSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusReadRegister32Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'float' )]
+  [Name( '32 bit Analog' )]
+  +TArduinoModbusReadRegister32BitAnalog : TArduinoModbusReadInputRegisterWordOrderBasic
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadRegister32BitAnalog )]
+    OutputPin : TOWArduinoAnalogSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister16BitRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint16_t' )]
+  [Name( 'Write Holding Register 16 bit Unsigned' )]
+  [ParentImage( TCLModbusWriteHoldingRegister16BitUnsignedRequest )]
+  +TArduinoModbusWriteHoldingRegister16BitUnsignedRequest : TArduinoModbusWriteHoldingRegistersBasicRequest
+
+    [ArduinoPinIsConnectedFlag]
+    ClockInputPin
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteHoldingRegister16BitUnsignedRequest )]
+    InputPin : TOWArduinoUnsignedSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Unsigned = 0
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister16BitRequest<int16_t>' )]
+  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister16BitRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int16_t' )]
+  [Name( 'Write Holding Register 16 bit Integer' )]
+  [ParentImage( TCLModbusWriteHoldingRegister16BitIntegerRequest )]
+  +TArduinoModbusWriteHoldingRegister16BitIntegerRequest : TArduinoModbusWriteHoldingRegistersBasicRequest
+
+    [ArduinoPinIsConnectedFlag]
+    ClockInputPin
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteHoldingRegister16BitIntegerRequest )]
+    InputPin : TOWArduinoIntegerSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Integer = 0
+
+  ;
+//---------------------------------------------------------------------------
+  TArduinoModbusWriteHoldingRegisterWordOrderBasicRequest : TArduinoModbusWriteHoldingRegistersBasicRequest
+
+    MostSignificantWordFirst : Boolean = False
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister32BitRequest<uint32_t>' )]
+  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister32BitRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+  [Name( 'Write Holding Register 32 bit Unsigned' )]
+  [ParentImage( TCLModbusWriteHoldingRegister32BitUnsignedRequest )]
+  +TArduinoModbusWriteHoldingRegister32BitUnsignedRequest : TArduinoModbusWriteHoldingRegisterWordOrderBasicRequest
+
+    [ArduinoPinIsConnectedFlag]
+    ClockInputPin
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteHoldingRegister32BitUnsignedRequest )]
+    InputPin : TOWArduinoUnsignedSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Unsigned = 0
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister32BitRequest<int32_t>' )]
+  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister32BitRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+  [Name( 'Write Holding Register 32 bit Integer' )]
+  [ParentImage( TCLModbusWriteHoldingRegister32BitIntegerRequest )]
+  +TArduinoModbusWriteHoldingRegister32BitIntegerRequest : TArduinoModbusWriteHoldingRegisterWordOrderBasicRequest
+
+    [ArduinoPinIsConnectedFlag]
+    ClockInputPin
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteHoldingRegister32BitIntegerRequest )]
+    InputPin : TOWArduinoIntegerSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Integer = 0
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister32BitRequest<float>' )]
+  [ArduinoClass( 'Mitov::ModbusWriteHoldingRegister32BitRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'float' )]
+  [Name( 'Write Holding Register 32 bit Analog' )]
+  +TArduinoModbusWriteHoldingRegister32BitAnalogRequest : TArduinoModbusWriteHoldingRegisterWordOrderBasicRequest
+
+    [ArduinoPinIsConnectedFlag]
+    ClockInputPin
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteHoldingRegister32BitAnalogRequest )]
+    InputPin : TOWArduinoAnalogSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Single = 0.0
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteRegister16Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint16_t' )]
+  [Name( '16 bit Unsigned' )]
+  [ParentImage( TCLModbusWriteRegister16BitUnsigned )]
+  +TArduinoModbusWriteRegister16BitUnsigned : TArduinoModbusBasicWriteRegister
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteRegister16BitUnsigned )]
+    InputPin : TOWArduinoUnsignedSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Unsigned  = 0
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteRegister16Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int16_t' )]
+  [Name( '16 bit Integer' )]
+  [ParentImage( TCLModbusWriteRegister16BitInteger )]
+  +TArduinoModbusWriteRegister16BitInteger : TArduinoModbusBasicWriteRegister
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteRegister16BitInteger )]
+    InputPin : TOWArduinoIntegerSinkPin 
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Integer = 0
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteRegister32Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+  [Name( '32 bit Unsigned' )]
+  [ParentImage( TCLModbusWriteRegister32BitUnsigned )]
+  +TArduinoModbusWriteRegister32BitUnsigned : TArduinoModbusWriteRegisterWordOrderBasic
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteRegister32BitUnsigned )]
+    InputPin : TOWArduinoUnsignedSinkPin
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Unsigned = 0
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteRegister32Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+  [Name( '32 bit Integer' )]
+  [ParentImage( TCLModbusWriteRegister32BitInteger )]
+  +TArduinoModbusWriteRegister32BitInteger : TArduinoModbusWriteRegisterWordOrderBasic
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteRegister32BitInteger )]
+    InputPin : TOWArduinoIntegerSinkPin 
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Integer = 0
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteRegister32Bit' )]
+  [ArduinoTemplateParameter( 'TYPE', 'float' )]
+  [Name( '32 bit Analog' )]
+  [ParentImage( TArduinoModbusWriteHoldingRegister32BitAnalogRequest )]
+  +TArduinoModbusWriteRegister32BitAnalog : TArduinoModbusWriteRegisterWordOrderBasic
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteRegister32BitAnalog )]
+    InputPin : TOWArduinoAnalogSinkPin 
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Single = 0.0
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusReadDigital' )]
+  [Name( 'Read Digital' )]
+  [ParentImage( TCLModbusReadDigital )]
+  +TArduinoModbusReadDigital : TArduinoModbusBasicReadDigital
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadDigital )]
+    OutputPin : TOWArduinoDigitalFlexibleSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoClass( 'Mitov::ModbusWriteDigital' )]
+  [Name( 'Write Coil' )]
+  [ParentImage( TCLModbusWriteCoil )]
+  +TArduinoModbusWriteDigital : TArduinoModbusBasicWriteDigital
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusWriteDigital )]
+    InputPin : TOWArduinoDigitalSinkPin 
+
+    [OWExcludeBindings]
+    [ArduinoFlexibleVariable]
+    InitialValue : Boolean = False
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadInputRegister16BitRequest' )]
+  [ArduinoClass( 'Mitov::ModbusRead16BitRegisterRequest' )]
+//  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+//  [ArduinoTemplateParameter( 'TYPE1', 'uint16_t' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint16_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadInputRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '1' )]
+  [Name( 'Read Input Register 16 bit Unsigned' )]
+  [ParentImage( TCLModbusReadInputRegister16BitUnsignedRequest )]
+  +TArduinoModbusReadInputRegister16BitUnsignedRequest : TArduinoModbusReadInputRegistersBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadInputRegister16BitUnsignedRequest )]
+    OutputPin : TOWArduinoUnsignedSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadInputRegister16BitRequest' )]
+  [ArduinoClass( 'Mitov::ModbusRead16BitRegisterRequest' )]
+//  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+//  [ArduinoTemplateParameter( 'TYPE1', 'int16_t' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int16_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadInputRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '1' )]
+  [Name( 'Read Input Register 16 bit Integer' )]
+  [ParentImage( TCLModbusReadInputRegister16BitIntegerRequest )]
+  +TArduinoModbusReadInputRegister16BitIntegerRequest : TArduinoModbusReadInputRegistersBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadInputRegister16BitIntegerRequest )]
+    OutputPin : TOWArduinoIntegerSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  TArduinoModbusReadInputRegisterWordOrderBasicRequest : TArduinoModbusReadInputRegistersBasicRequest
+
+    MostSignificantWordFirst : Boolean = False
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadInputRegister32BitRequest' )]
+  [ArduinoClass( 'Mitov::ModbusRead32BitRegisterRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'uint32_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadInputRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '2' )]
+  [Name( 'Read Input Register 32 bit Unsigned' )]
+  [ParentImage( TCLModbusReadInputRegister32BitUnsignedRequest )]
+  +TArduinoModbusReadInputRegister32BitUnsignedRequest : TArduinoModbusReadInputRegisterWordOrderBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadInputRegister32BitUnsignedRequest )]
+    OutputPin : TOWArduinoUnsignedSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadInputRegister32BitRequest' )]
+  [ArduinoClass( 'Mitov::ModbusRead32BitRegisterRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'int32_t' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadInputRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '2' )]
+  [Name( 'Read Input Register 32 bit Integer' )]
+  [ParentImage( TCLModbusReadInputRegister32BitIntegerRequest )]
+  +TArduinoModbusReadInputRegister32BitIntegerRequest : TArduinoModbusReadInputRegisterWordOrderBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadInputRegister32BitIntegerRequest )]
+    OutputPin : TOWArduinoIntegerSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+//  [ArduinoClass( 'Mitov::ModbusReadInputRegister32BitRequest' )]
+  [ArduinoClass( 'Mitov::ModbusRead32BitRegisterRequest' )]
+  [ArduinoTemplateParameter( 'TYPE', 'float' )]
+  [ArduinoTemplateParameter( 'C_FUNCTION_CODE', 'Mitov::Modbus::mbfReadInputRegs' )]
+  [ArduinoTemplateParameter( 'C_COUNT', '2' )]
+  [Name( 'Read Input Register 32 bit Analog' )]
+  +TArduinoModbusReadInputRegister32BitAnalogRequest : TArduinoModbusReadInputRegisterWordOrderBasicRequest
+
+    [OWPrimaryPin]
+    [OWPinGroup( TArduinoModbusReadInputRegister32BitAnalogRequest )]
+    OutputPin : TOWArduinoAnalogFlexibleSourcePin 
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_Modbus_Client.h' )]
+  [ArduinoClass( 'Mitov::ModbusRemoteDeviceAccess' )]
+  [Name( 'Modbus Remote Device Access' )]
+  [CreateName( 'ModbusRemoteDeviceAccess' )]
+  [Category( TModbusClientControlToolbarCategory )]
+  +TArduinoModbusRemoteDeviceAccess : TArduinoComponent
+
+    [OWPrimaryPin]
+    ModbusOutputPin : TOWArduinoModbusSourcePin
+
+    ErrorOutputPin : TOWArduinoUnsignedSourcePin
+    ExceptionOutputPin : TOWArduinoUnsignedSourcePin
+
+//    [ValueRange( 0, 255 )] // Check range
+    [ValueRange( 1, 247 )]
+    ID : Unsigned = 1
+
+    [ComponentEditorEntryDesign( 'Add &Requests ...' )]
+    Requests : TArduinoModbusRequests
+
+  ;
+//---------------------------------------------------------------------------
+  [Category( TModbusClientControlToolbarCategory )]
+  TArduinoModbusClientBasicProtocol : TArduinoCommonByteFilter
+
+    [OWPrimaryPin]
+    ModbusInputPin : TOWArduinoModbusMultiSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  TArduinoModbusClientBasicTimeoutProtocol : TArduinoModbusClientBasicProtocol
+
+    [ NamePostfix( '(mS)' ) ]
+    ResponseTimeout : Unsigned = 2000
+
+//    [ValueRange( 0, High( UInt16 ) )]
+    [MaxValue( $FFFF )]
+    MaxTransactions : Unsigned = 30
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_Modbus_Client.h' )]
+  [ArduinoClass( 'Mitov::ModbusClientRawProtocol' )]
+  [Name( 'Modbus Client(Master) Raw Protocol' )]
+  [CreateName( 'ModbusClientRawProtocol' )]
+  +TArduinoModbusClientRawProtocol : TArduinoModbusClientBasicProtocol;
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_Modbus_Client.h' )]
+  [ArduinoClass( 'Mitov::ModbusClientSerialProtocol' )]
+  [Name( 'Modbus Client(Master) Serial Protocol(RTU and Ascii)' )]
+  [CreateName( 'ModbusClientSerialProtocol' )]
+  [ArduinoLoopBegin]
+  [ArduinoVariable( Boolean, 'FDetectTimerRunning' )]
+  [ArduinoVariable( Boolean, 'FTimeoutTimerRunning' )]
+  +TArduinoModbusClientSerialProtocol : TArduinoModbusClientBasicTimeoutProtocol
+
+    [ NamePostfix( '(mS)' ) ]
+    PacketDetectInterval : Unsigned = 100
+
+    AsciiFormat : Boolean = False
+    InputBufferSizeLimit : Unsigned = 1024
+
+  ;
+//---------------------------------------------------------------------------
+  [ArduinoInclude( 'Mitov_Modbus_Client.h' )]
+  [ArduinoClass( 'Mitov::ModbusClientTCPProtocol' )]
+  [Name( 'Modbus Client(Master) TCP/IP Protocol' )]
+  [CreateName( 'ModbusClientTCPProtocol' )]
+  [ArduinoLoopBegin]
+  +TArduinoModbusClientTCPProtocol : TArduinoModbusClientBasicTimeoutProtocol
+
+    ResponseTimeout = 10000
+
+  ;
+//---------------------------------------------------------------------------
+; // Mitov
