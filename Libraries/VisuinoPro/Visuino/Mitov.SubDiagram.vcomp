@@ -1,0 +1,344 @@
+[VisuinoApplication( VisuinoPro )]
+Mitov
+//---------------------------------------------------------------------------
+  [Name( 'Analog Output' )]
+  [CreateName( 'Analog Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoAnalogSourcePin )]
+  +TVisuinoSubDiagramPropertyAnalogSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoAnalogSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Analog Array Output' )]
+  [CreateName( 'Analog Array Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoAnalogArraySourcePin )]
+  +TVisuinoSubDiagramPropertyAnalogArraySink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoAnalogArraySinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Complex Array Output' )]
+  [CreateName( 'Complex Array Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoComplexArraySourcePin )]
+  +TVisuinoSubDiagramPropertyComplexArraySink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoComplexArraySinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Complex Output' )]
+  [CreateName( 'Complex Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoComplexSourcePin )]
+  +TVisuinoSubDiagramPropertyComplexSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoComplexSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Quaternion Output' )]
+  [CreateName( 'Quaternion Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoQuaternionSourcePin )]
+  +TVisuinoSubDiagramPropertyQuaternionSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoQuaternionSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Digital Output' )]
+  [CreateName( 'Digital Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoDigitalSourcePin )]
+  +TVisuinoSubDiagramPropertyDigitalSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoDigitalSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Text Output' )]
+  [CreateName( 'Text Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoStringSourcePin )]
+  +TVisuinoSubDiagramPropertyTextSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoStringSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Char Output' )]
+  [CreateName( 'Char Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoCharSourcePin )]
+  +TVisuinoSubDiagramPropertyCharSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoCharSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Integer Output' )]
+  [CreateName( 'Integer Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoIntegerSourcePin )]
+  +TVisuinoSubDiagramPropertyIntegerSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoIntegerSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Unsigned Output' )]
+  [CreateName( 'Unsigned Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoUnsignedSourcePin )]
+  +TVisuinoSubDiagramPropertyUnsignedSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoUnsignedSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Date/Time Output' )]
+  [CreateName( 'Date/Time Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoDateTimeSourcePin )]
+  +TVisuinoSubDiagramPropertyDateTimeSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoDateTimeSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Color Output' )]
+  [CreateName( 'Color Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoColorSourcePin )]
+  +TVisuinoSubDiagramPropertyColorSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoColorSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Alpha Color Output' )]
+  [CreateName( 'Alpha Color Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoAlphaColorSourcePin )]
+  +TVisuinoSubDiagramPropertyAlphaColorSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoAlphaColorSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'RGBW Color Output' )]
+  [CreateName( 'RGBW Color Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoRGBWColorSourcePin )]
+  +TVisuinoSubDiagramPropertyRGBWColorSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoRGBWColorSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'RGBW Alpha Color Output' )]
+  [CreateName( 'RGBW Alpha Color Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoRGBWAlphaColorSourcePin )]
+  +TVisuinoSubDiagramPropertyRGBWAlphaColorSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoRGBWAlphaColorSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Byte Output' )]
+  [CreateName( 'Byte Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoByteSourcePin )]
+  +TVisuinoSubDiagramPropertyByteSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoByteSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Clock Output' )]
+  [CreateName( 'Clock Output' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoClockSourcePin )]
+  +TVisuinoSubDiagramPropertyClockSink : TVisuinoSubDiagramPropertyBasicSink
+
+    [OWPrimaryPin]
+    InputPin : TOWArduinoClockSinkPin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Analog Input' )]
+  [CreateName( 'Analog Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoAnalogSinkPin )]
+  +TVisuinoSubDiagramPropertyAnalogSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoAnalogSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Analog Array Input' )]
+  [CreateName( 'Analog Array Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoAnalogArraySinkPin )]
+  +TVisuinoSubDiagramPropertyAnalogArraySource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoAnalogArraySourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Complex Array Input' )]
+  [CreateName( 'Complex Array Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoComplexArraySinkPin )]
+  +TVisuinoSubDiagramPropertyComplexArraySource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoComplexArraySourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Complex Input' )]
+  [CreateName( 'Complex Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoComplexSinkPin )]
+  +TVisuinoSubDiagramPropertyComplexSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoComplexSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Quaternion Input' )]
+  [CreateName( 'Quaternion Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoQuaternionSinkPin )]
+  +TVisuinoSubDiagramPropertyQuaternionSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoQuaternionSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Digital Input' )]
+  [CreateName( 'Digital Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoDigitalSinkPin )]
+  +TVisuinoSubDiagramPropertyDigitalSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoDigitalSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Text Input' )]
+  [CreateName( 'Text Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoStringSinkPin )]
+  +TVisuinoSubDiagramPropertyTextSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoStringSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Char Input' )]
+  [CreateName( 'Char Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoCharSinkPin )]
+  +TVisuinoSubDiagramPropertyCharSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoCharSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Integer Input' )]
+  [CreateName( 'Integer Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoIntegerSinkPin )]
+  +TVisuinoSubDiagramPropertyIntegerSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoIntegerSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Unsigned Input' )]
+  [CreateName( 'Unsigned Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoUnsignedSinkPin )]
+  +TVisuinoSubDiagramPropertyUnsignedSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoUnsignedSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Date/Time Input' )]
+  [CreateName( 'Date/Time Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoDateTimeSinkPin )]
+  +TVisuinoSubDiagramPropertyDateTimeSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoDateTimeSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Color Input' )]
+  [CreateName( 'Color Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoColorSinkPin )]
+  +TVisuinoSubDiagramPropertyColorSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Alpha Color Input' )]
+  [CreateName( 'Alpha Color Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoAlphaColorSinkPin )]
+  +TVisuinoSubDiagramPropertyAlphaColorSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoAlphaColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'RGBW Color Input' )]
+  [CreateName( 'RGBW Color Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoRGBWColorSinkPin )]
+  +TVisuinoSubDiagramPropertyRGBWColorSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoRGBWColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'RGBW Alpha Color Input' )]
+  [CreateName( 'RGBW Alpha Color Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoRGBWAlphaColorSinkPin )]
+  +TVisuinoSubDiagramPropertyRGBWAlphaColorSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoRGBWAlphaColorSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Byte Input' )]
+  [CreateName( 'Byte Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoByteSinkPin )]
+  +TVisuinoSubDiagramPropertyByteSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoByteSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+  [Name( 'Clock Input' )]
+  [CreateName( 'Clock Input' )]
+  [VisuinoSubDiagramInstancePinType( TOWArduinoClockSinkPin )]
+  +TVisuinoSubDiagramPropertyClockSource : TVisuinoSubDiagramPropertySource
+
+    [OWPrimaryPin]
+    OutputPin : TOWArduinoClockSourcePin
+
+  ;
+//---------------------------------------------------------------------------
+; // Mitov
